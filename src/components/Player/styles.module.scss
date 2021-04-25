@@ -1,6 +1,6 @@
 .playerContainer {
-  padding: 3rem 4rem;
-  width: 22.5rem;
+  padding: 3rem 2rem;
+  width: 24.5rem;
   height: 100vh;
 
   background: var(--purple-500);
@@ -28,6 +28,28 @@
     &.empty {
       opacity: 0.5;
     }
+  }
+}
+
+.currentEpisode {
+  text-align: center;
+
+  img {
+    border-radius: 1.5rem;
+  }
+
+  strong {
+    display: block;
+    margin-top: 2rem;
+    font: 600 1.25rem Lexend, sans-serif;
+    line-height: 1.75rem;
+  }
+
+  span {
+    display: block;
+    margin-top: 1rem;
+    opacity: 0.6;
+    line-height: 1.5rem;
   }
 }
 
