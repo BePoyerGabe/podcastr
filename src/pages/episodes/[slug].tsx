@@ -7,6 +7,8 @@ import Image from 'next/image'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { api } from '../../services/api'
 import { convertDuration } from '../../utils/convertDuration'
+import Head from 'next/head'
+
 
 import styles from './episode.module.scss'
 import { usePlayer } from '../../contexts/playerContext'
@@ -32,6 +34,9 @@ export default function Episode({ episode }: EpisodeProps) {
 
     return (
         <div className={styles.episode}>
+            <Head>
+                <title>{episode.title}</title>
+            </Head>
             <div className={styles.thumbnailContainer}>
                 <Link href="/">
                     <button type='button'>
