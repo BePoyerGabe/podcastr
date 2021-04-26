@@ -10,8 +10,7 @@ import ptBR from 'date-fns/locale/pt-BR'
 
 import { api } from '../services/api'
 import { convertDuration } from '../utils/convertDuration'
-import { useContext } from 'react'
-import { PlayerContext } from '../contexts/playerContext'
+import { usePlayer } from '../contexts/playerContext'
 
 import styles from './home.module.scss'
 
@@ -33,7 +32,7 @@ type HomeProps = {
 
 
 export default function Home({ latestEp, allEpisodes }: HomeProps) {
-  const { playList } = useContext(PlayerContext)
+  const { playList } = usePlayer()
 
   const episodeList = [...latestEp, ...allEpisodes]
 
